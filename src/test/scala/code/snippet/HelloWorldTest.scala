@@ -29,7 +29,7 @@ object HelloWorldTestSpecs extends Specification {
     }
   }
 
-  "HelloWorld Snippet" should {
+  /* "HelloWorld Snippet" should {
     "Put the time in the node" in {
       val hello = new HelloWorld
       Thread.sleep(1000) // make sure the time changes
@@ -39,7 +39,7 @@ object HelloWorldTestSpecs extends Specification {
       str.indexOf(stableTime.toString) must be >= 0
       str.indexOf("Hello at") must be >= 0
     }
-  }
+  } */
 }
 
 }

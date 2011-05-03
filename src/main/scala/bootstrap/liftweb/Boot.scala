@@ -8,7 +8,9 @@ import common._
 import http._
 import sitemap._
 import Loc._
+import mapper._
 
+import code.model._
 
 /**
  * A class that's instantiated early and run.  It allows the application
@@ -16,6 +18,21 @@ import Loc._
  */
 class Boot {
   def boot {
+
+    println("carregando db")
+
+    if (!DB.jndiJdbcConnAvailable_?) {
+      val vendor = new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver", 
+				    Props.get("db.url") openOr "jdbc:h2:mookirana.db;AUTO_SERVER=TRUE",
+				    Props.get("db.user"),
+				    Props.get("db.password"))
+      LiftRules.unloadHooks.append(vendor.closeAllConnections_! _)
+      DB.defineConnectionManager(DefaultConnectionIdentifier, vendor)
+      
+    }
+
+    Schemifier.schemify(true, Schemifier.infoF _, User, AccountEntry)
+
     // where to search snippet
     LiftRules.addToPackages("code")
 
@@ -42,6 +59,15 @@ class Boot {
 
     // Force the request to be UTF-8
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))
+
+    // Use HTML5
+    //LiftRules.htmlProperties.default.set((r: Req) => new Html5Properties(r.userAgent))
+
+    // Use jQuery 1.4
+    LiftRules.jsArtifacts = net.liftweb.http.js.jquery.JQuery14Artifacts
+
+    // Create transaction on request
+    S.addAround(DB.buildLoanWrapper)
 
   }
 }

@@ -19,8 +19,6 @@ import code.model._
 class Boot {
   def boot {
 
-    println("carregando db")
-
     if (!DB.jndiJdbcConnAvailable_?) {
       val vendor = new StandardDBVendor(Props.get("db.driver") openOr "org.h2.Driver", 
 				    Props.get("db.url") openOr "jdbc:h2:mookirana.db;AUTO_SERVER=TRUE",

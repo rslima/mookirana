@@ -2,12 +2,159 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
       <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
       <title>Home</title>
+      <link rel="stylesheet" href="css/principal.css" type="text/css" />
   </head>
 <body class="lift:content_id=main">
     <div id="main" class="lift:surround?with=default;at=content">
+        <div>
+            <form>
+                <fieldset>
+                    <select>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Mar&ccedil;o</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setemro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                    <select>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                    </select>
+                    <input type="submit" value="Atualizar" />
+                </fieldset>
+            </form>
+        </div>
+        <table id="entradas">
+            <thead>
+                <tr class="cabecalho">
+                    <th class="tipo">Tipo</th>
+                    <th class="categoria">Categoria</th>
+                    <th class="responsavel">Respons&aacute;vel</th>
+                    <th class="data">Data</th>
+                    <th class="valor">Valor</th>
+                    <th class="favorecido">Favorecido</th>
+                    <th class="fonte">Fonte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tipo">Despesa</td>
+                    <td class="categoria">Almo&ccedil;o</td>
+                    <td class="responsavel">Marido</td>
+                    <td class="data">01/06/2009</td>
+                    <td class="valor despesa"><span class="moeda">R$</span><span class="valor-monetario">16,09</span></td>
+                    <td class="favorecido">Baked Potato</td>
+                    <td class="fonte">Cart&atilde;o de Cr&eacute;dito</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <form>
+                <fieldset>
+                    <p>
+                        <label for="tipo">Tipo</label>
+                        <select id="tipo">
+                            <option value="0">Receita</option>
+                            <option value="1">Despesa</option>
+                        </select>
 
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria">
+                            <option value="0">Academia/Personal</option>
+                            <option value="1">Anuidade Cart&atilde;o</option>
+                            <option value="2">Almo&ccedil;o</option>
+                            <option value="3">Beb&ecirc; - Vestu&aacute;rio</option>
+                            <option value="4">Cinema</option>
+                            <option value="5">Combust&iacute;vel</option>
+                            <option value="6">Curso</option>
+                            <option value="7">Dentista</option>
+                            <option value="8">D&oacute;lar</option>
+                            <option value="9">Empregada</option>
+                            <option value="10">Energia El&eacute;trica</option>
+                            <option value="11">Estacionamento</option>
+                            <option value="12">Exame/Consulta</option>
+                            <option value="13">Farm&aacute;cia</option>
+                            <option value="14">Festa</option>
+                            <option value="15">Filme</option>
+                            <option value="16">Financiamento</option>
+                            <option value="17">Foto</option>
+                            <option value="18">Frete</option>
+                            <option value="19">Gorjeta</option>
+                            <option value="20">Hotel</option>
+                            <option value="21">Internet</option>
+                            <option value="22">IPVA</option>
+                            <option value="23">Jogos</option>
+                            <option value="24">Lanche</option>
+                            <option value="25">Lavagem</option>
+                            <option value="26">Livros</option>
+                            <option value="27">Luz</option>
+                            <option value="28">Material de Constru&ccedil;&atilde;o</option>
+                            <option value="29">Mec&acirc;nico/Revis&atilde;o</option>
+                            <option value="30">Multa de Tr&acirc;nsito</option>
+                            <option value="31">Nutricionista</option>
+                            <option value="32">&Ocirc;nibus/Metr&ocirc;</option>
+                            <option value="33">Padaria</option>
+                            <option value="34">Presente</option>
+                            <option value="35">Restaurante</option>
+                            <option value="36">Sal&atilde;o de Beleza</option>
+                            <option value="37">Sal&aacute;rio</option>
+                            <option value="38">Seguro Autom&oacute;vel</option>
+                            <option value="39">Supermercado</option>
+                            <option value="40">T&aacute;xi</option>
+                            <option value="41">Telefone Celular</option>
+                            <option value="42">Telefone Fixo</option>
+                            <option value="43">TV por Assinatura</option>
+                            <option value="44">Vestu&aacute;rio</option>
+                        </select>
+
+                        <label for="responsavel">Respons&aacute;vel</label>
+                        <select id="responsavel">
+                            <option value="0">Esposa</option>
+                            <option value="1">Marido</option>
+                        </select>
+
+                        <label for="fonte">Fonte</label>
+                        <select id="fonte">
+                            <option value="0">Cart&atilde;o de Cr&eacute;dito</option>
+                            <option value="1">Conta-Corrente</option>
+                            <option value="2">Dinheiro</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="favorecido">Favorecido <span class="obrigatorio">*</span></label>
+                        <input id="favorecido" type="text" size="50"/>
+                    </p>
+                    <p>
+                        <label for="data">Data <span class="obrigatorio">*</span></label>
+                        <input id="data" type="text" size="10" value="24/06/2010" />
+                    </p>
+
+                    <p>
+                        <label for="valor">Valor <span class="obrigatorio">*</span></label>
+                        <input id="valor" type="text" size="18" />
+                    </p>
+                    <p>
+                        <div><label for="observacao" id="observacao-label">Observacao</label></div>
+                        <textarea id="observacao"rows="4" cols="80"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Gravar">
+                    </p>
+
+                </fieldset>
+            </form>
+        </div>
     </div>
+
 
 </body>
 </html>

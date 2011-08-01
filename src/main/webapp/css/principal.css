@@ -1,0 +1,53 @@
+.obrigatorio {
+    color: red;
+}
+
+.despesa {
+    color: red;
+}
+
+.receita {
+    color: blue;
+}
+
+.cabecalho th {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+}
+
+#entradas .data {
+    width: 73px;
+}
+
+#entradas .tipo {
+    width: 54px;
+}
+
+#entradas .responsavel {
+    width: 85px;
+}
+
+#entradas .valor {
+    width: 95px;
+}
+
+#entradas .fonte {
+    width: 114px;
+}
+
+#entradas .categoria {
+    width: 150px;
+}
+
+#entradas {
+    width: 100%;
+}
+
+.moeda {
+    margin-right: 1em;
+}
+
+.valor-monetario {
+    float: right;
+}

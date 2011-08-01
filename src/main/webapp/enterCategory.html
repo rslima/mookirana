@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+      <title>Home</title>
+      <link rel="stylesheet" href="css/principal.css" type="text/css" />
+  </head>
+<body class="lift:content_id=main">
+    <div id="main" class="lift:surround?with=default;at=content">
+        <div>
+            <form>
+                <fieldset>
+                    <label for="busca-categoria">Categoria:</label>
+                    <input id="busca-categoria" type="text" value="" />
+                    <input type="submit" value="Buscar" />
+            </form>
+        </div>
+        <table id="categorias">
+            <thead>
+                <tr class="cabecalho">
+                    <th class="id">Id</th>
+                    <th class="categoria">Categoria</th>
+                    <th class="tipo">Tipo</th>
+                    <th class="acao">A&ccedil;&atilde;o</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="id">1</td>
+                    <td class="categoria">Almo&ccedil;o</td>
+                    <td class="tipo">Despesa</td>
+                    <td class="acao"><input type="button" value="Editar" /> <input type="button" value="Excluir" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <form>
+                <fieldset>
+                    <p>
+                        <label for="categoria">Categoria</label>
+                        <input id="categoria" type="text" value="">
+                    </p>
+                    <p>
+                        <label for="tipo">Tipo</label>
+                        <select id="tipo">
+                            <option value="0">Receita</option>
+                            <option value="1">Despesa</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="submit" value="Gravar">
+                    </p>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

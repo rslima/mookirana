@@ -49,6 +49,7 @@ class AccountEntry extends LongKeyedMapper[AccountEntry] with IdPK with CreatedU
   object entryType extends MappedEnum(this,EntryType)
   object entryValue extends MappedDecimal(this,java.math.MathContext.DECIMAL64,2)
   object description extends MappedText(this)
+  object source extends MappedEnum(this,EntrySource)
 
 }
 
